@@ -1,0 +1,12 @@
+{
+  "extends": ["alloy", "alloy/react", "alloy/typescript"],
+  "plugins": ["react-hooks", "import", "prefer-arrow", "@emotion"],
+  "env": {
+    "jest": true
+  },
+  "globals": {},
+  "rules": {
+    "max-lines": ["warn", 120],
+    "max-lines-per-function": ["warn", 120]
+  }
+}
