@@ -1,7 +1,9 @@
-import Head from 'next/head';
 import React from 'react';
+import Head from 'next/head';
+import { Post } from '../types';
+import { fetchAllPosts, allPostsUrl, useAllPosts } from '../data/use-posts';
 // @ts-ignore
-import { jsx, css } from '@emotion/react';
+import { css, jsx } from '@emotion/react';
 
 // * --------------------------------------------------------------------------- style
 
@@ -11,7 +13,16 @@ const style = css`
 
 // * --------------------------------------------------------------------------- component
 
-const HomePage: React.FC = () => {
+export const getStaticProps = async () => {
+  const posts = await fetchAllPosts(allPostsUrl);
+  return { props: { posts }, revalidate: 1 };
+};
+
+const HomePage: React.FC<{ posts: Post[] }> = ({ posts }) => {
+  const { data, error } = useAllPosts(posts);
+
+  if (error) return <div>error: {error}</div>;
+  if (!data) return <div>loading...</div>;
   return (
     <>
       <Head>
