@@ -1,7 +1,7 @@
 import useSWR from 'swr';
 import axios from 'axios';
-import { Post } from '../types';
-import { NOTION_BLOG_ID } from '../constant';
+import { Post } from '../src/types';
+import { NOTION_BLOG_ID } from '../src/assets/constant';
 
 export const allPostsUrl = `https://notion-api.splitbee.io/v1/table/${NOTION_BLOG_ID}`;
 

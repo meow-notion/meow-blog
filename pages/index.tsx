@@ -1,15 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
-import { Post } from '../types';
+import { Post } from '@/types';
 import { fetchAllPosts, allPostsUrl, useAllPosts } from '../data/use-posts';
-// @ts-ignore
-import { css, jsx } from '@emotion/react';
-
-// * --------------------------------------------------------------------------- style
-
-const style = css`
-  color: red;
-`;
+import { PCLayout } from '@/Layouts/PC/PCLayout';
 
 // * --------------------------------------------------------------------------- component
 
@@ -28,7 +21,7 @@ const HomePage: React.FC<{ posts: Post[] }> = ({ posts }) => {
       <Head>
         <title>绅士喵呜の博客</title>
       </Head>
-      <div css={style}>hello word</div>
+      <PCLayout />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import axios from 'axios';
-import { NOTION_BLOG_ID } from '../constant';
+import { NOTION_BLOG_ID } from '../src/assets/constant';
 
 // * --------------------------------------------------------------------------- interface
 
