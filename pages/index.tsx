@@ -1,17 +1,19 @@
 import React from 'react';
 import Head from 'next/head';
-import { Post } from '@/types';
+import { ArticleType } from '@/apis/use-articles';
 import { fetchAllPosts, allPostsUrl, useAllPosts } from '../data/use-posts';
 import { PCLayout } from '@/Layouts/PC/PCLayout';
 
-// * --------------------------------------------------------------------------- component
+// * --------------------------------------------------------------------------- SSG
 
 export const getStaticProps = async () => {
   const posts = await fetchAllPosts(allPostsUrl);
   return { props: { posts }, revalidate: 1 };
 };
 
-const HomePage: React.FC<{ posts: Post[] }> = ({ posts }) => {
+// * --------------------------------------------------------------------------- component
+
+const HomePage: React.FC<{ posts: ArticleType[] }> = ({ posts }) => {
   const { data, error } = useAllPosts(posts);
 
   if (error) return <div>error: {error}</div>;

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { PCLayout } from '@/Layouts/PC/PCLayout';
 
-const Schedules: React.FC = () => {
+const Schedule: React.FC = () => {
   return (
     <>
       <Head>
@@ -13,4 +13,4 @@ const Schedules: React.FC = () => {
   );
 };
 
-export default Schedules;
+export default Schedule;

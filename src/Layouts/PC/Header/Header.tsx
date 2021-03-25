@@ -1,5 +1,6 @@
 import React from 'react';
 import tw, { css } from 'twin.macro';
+import Link from 'next/link';
 import { useHeaderService } from './useHeaderService';
 import { pxToRem } from '@/utils/pxToRem';
 
@@ -21,7 +22,7 @@ const pcContainer = css`
 
 const logoWrapper = css`
   width: 30rem;
-  ${tw`h-full flex flex-row justify-start items-center`}
+  ${tw`h-full flex flex-row justify-start items-center cursor-pointer`}
 `;
 
 const img = css`
@@ -38,10 +39,12 @@ export const Header: React.FC = () => {
     <header css={header}>
       <div css={pcContainer}>
         {/* logo 和 标语 区域 */}
-        <div css={logoWrapper}>
-          <img css={img} src={imgUrl} draggable="false" alt="LOGO" />
-          <span>{text}</span>
-        </div>
+        <Link href={'/'}>
+          <a css={logoWrapper}>
+            <img css={img} src={imgUrl} draggable="false" alt="LOGO" />
+            <span>{text}</span>
+          </a>
+        </Link>
         {/* TODO：音乐组件 */}
         <div>music</div>
       </div>

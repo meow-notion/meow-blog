@@ -8,10 +8,10 @@ import { NavLink } from './NavLink/NavLink';
 const nav = css`
   // TODO: 抽离成公共样式 默认文字颜色 text-secondary
   color: rgba(0, 0, 0, 0.54);
-  ${tw`text-sm w-40`}
+  ${tw`text-sm w-40 mr-4`}
 `;
 
-// * --------------------------------------------------------------------------- component
+// * -------------w-------------------------------------------------------------- component
 
 export const Nav: React.FC = () => {
   const navService = useNavService();
