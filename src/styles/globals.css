@@ -25,7 +25,10 @@ a {
 html {
   font-size: 16px;
 }
+body {
+  overflow-y: overlay;
+}
 
 .header {
-  @apply container justify-between items-center box-border border-green-700 text-sm bg-blue-50 flex-row justify-start;
+  @apply border-red-700 opacity-60;
 }

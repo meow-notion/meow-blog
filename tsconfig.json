@@ -1,5 +1,4 @@
 {
-  "files": ["twin.d.ts"],
   "compilerOptions": {
     "allowJs": true,
     "alwaysStrict": true,

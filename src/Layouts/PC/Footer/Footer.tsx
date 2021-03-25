@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
   return (
     <footer css={footer}>
       {info.map((item) => (
-        <span>{item.text}</span>
+        <span key={item.text}>{item.text}</span>
       ))}
     </footer>
   );

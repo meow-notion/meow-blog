@@ -1,7 +1,7 @@
 import React from 'react';
 import tw, { css } from 'twin.macro';
 import { useHeaderService } from './useHeaderService';
-import { pxToRem } from '@/utils/px-to-rem';
+import { pxToRem } from '@/utils/pxToRem';
 
 // * --------------------------------------------------------------------------- style
 
