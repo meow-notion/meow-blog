@@ -3,12 +3,11 @@ import tw, { css } from 'twin.macro';
 
 // * --------------------------------------------------------------------------- style
 
-const music = css`
-  ${tw`text-blue-200`};
-`
+const rank = css`
+  ${tw`w-full`}
+`;
 
 // * --------------------------------------------------------------------------- component
-
-export const Music: React.FC = () => {
-  return <div css={music}>呜呜呜，Music 组件怎么做呀</div>;
+export const ArticleRanking: React.FC = () => {
+  return <div css={rank}>ranking</div>;
 };

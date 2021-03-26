@@ -5,8 +5,10 @@ module.exports = {
     extend: {
       spacing: {
         18: '4.5rem',
-        mn: '0.875rem'
-      }
+        150: '37rem',
+        160: '40rem',
+        mn: '0.875rem',
+      },
     },
   },
   variants: {

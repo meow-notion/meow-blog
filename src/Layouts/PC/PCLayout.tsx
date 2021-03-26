@@ -9,7 +9,7 @@ import { Footer } from './Footer/Footer';
 const pcLayout = css`
   // TODO: 抽离成变量 pcWidth or pcContainer
   width: 1050px;
-  ${tw`w-full h-full flex flex-col justify-between items-center`}
+  ${tw`min-h-screen w-full flex flex-col justify-between items-center`}
 `;
 
 // * --------------------------------------------------------------------------- component

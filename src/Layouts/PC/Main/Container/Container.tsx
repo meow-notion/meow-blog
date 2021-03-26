@@ -14,7 +14,7 @@ import { AboutMe } from './7-about-me/AboutMe';
 // * --------------------------------------------------------------------------- style
 
 const container = css`
-  ${tw`flex-1 border border-black border-dashed`}
+  ${tw`ml-44 flex-1`}
 `;
 
 // * --------------------------------------------------------------------------- component

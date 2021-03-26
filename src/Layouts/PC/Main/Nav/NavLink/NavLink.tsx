@@ -6,10 +6,10 @@ import { useNavLinkService } from './useNavLinkService';
 // * --------------------------------------------------------------------------- style
 
 const navLink = (active: boolean) => css`
-  ${tw`h-10 mb-2.5 px-3.5 last:mb-0 flex items-center hover:bg-white hover:opacity-60 cursor-pointer rounded font-bold`};
   &:hover {
     color: #0088f5;
   }
+  ${tw`h-10 mb-2.5 px-3.5 last:mb-0 flex items-center hover:bg-white hover:opacity-60 cursor-pointer rounded font-bold`};
   ${active && `background-color: rgba(255, 255, 255, 0.8); color: #0088f5;`};
   ${active && tw`hover:bg-white hover:opacity-80`};
 `;
@@ -18,7 +18,7 @@ const navIcon = css`
   ${tw`mr-3 text-sm font-light`}
 `;
 
-// * ---------------------------------------------------------------------------
+// * --------------------------------------------------------------------------- component
 
 export const NavLink: React.FC<{ key: string; uuid: string }> = ({ uuid }) => {
   const navLinkService = useNavLinkService(uuid);

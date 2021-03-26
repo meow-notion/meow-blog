@@ -10,7 +10,7 @@ import logo from '../../../assets/logo.svg';
 export const useHeaderService = () => {
   // const imgUrl = 'https://cdn.surmon.me/images/logo.svg';
   const imgUrl = logo;
-  const text = '我已经是只废猫了 QWQ ~~~~~';
+  const text = '欢迎来到 ♂ 绅士喵呜の妙妙屋！';
 
   return {
     text,

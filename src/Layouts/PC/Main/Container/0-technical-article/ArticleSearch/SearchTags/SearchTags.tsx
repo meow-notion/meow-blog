@@ -3,12 +3,13 @@ import tw, { css } from 'twin.macro';
 
 // * --------------------------------------------------------------------------- style
 
-const music = css`
-  ${tw`text-blue-200`};
-`
+const container = css`
+  background-color: rgba(255, 255, 255, 0.6);
+  ${tw`border border-black`}
+`;
 
 // * --------------------------------------------------------------------------- component
 
-export const Music: React.FC = () => {
-  return <div css={music}>呜呜呜，Music 组件怎么做呀</div>;
+export const SearchTags: React.FC = () => {
+  return <div css={container}>search</div>;
 };

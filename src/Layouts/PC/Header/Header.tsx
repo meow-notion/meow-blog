@@ -2,16 +2,15 @@ import React from 'react';
 import tw, { css } from 'twin.macro';
 import Link from 'next/link';
 import { useHeaderService } from './useHeaderService';
-import { pxToRem } from '@/utils/pxToRem';
+import { Music } from './Music/Music';
 
 // * --------------------------------------------------------------------------- style
 
 const header = css`
   color: #0088f5;
   // TODO: 抽离成变量 module-bg
-  height: ${pxToRem(60)};
-  background-color: rgba(255, 255, 255, 0.6);
-  ${tw`w-full mx-auto text-sm`}
+  background-color: rgba(255, 255, 255, 0.8);
+  ${tw`h-16 fixed w-full mx-auto text-sm z-50`}
 `;
 
 const pcContainer = css`
@@ -25,15 +24,18 @@ const logoWrapper = css`
   ${tw`h-full flex flex-row justify-start items-center cursor-pointer`}
 `;
 
-const img = css`
-  width: 11rem;
-  ${tw`pr-16`}
+const logo = css`
+  ${tw`w-40 text-3xl font-bold font-mono mr-6`}
 `;
+
+// const img = css`
+//   ${tw`w-44 pr-16`}
+// `;
 
 // * --------------------------------------------------------------------------- component
 
 export const Header: React.FC = () => {
-  const { text, imgUrl } = useHeaderService();
+  const { text } = useHeaderService();
 
   return (
     <header css={header}>
@@ -41,12 +43,13 @@ export const Header: React.FC = () => {
         {/* logo 和 标语 区域 */}
         <Link href={'/'}>
           <a css={logoWrapper}>
-            <img css={img} src={imgUrl} draggable="false" alt="LOGO" />
+            {/*<img css={img} src={imgUrl} draggable="false" alt="LOGO" />*/}
+            <span css={logo}>{'<Meow />'}</span>
             <span>{text}</span>
           </a>
         </Link>
         {/* TODO：音乐组件 */}
-        <div>music</div>
+        <Music />
       </div>
     </header>
   );

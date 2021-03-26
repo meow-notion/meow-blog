@@ -17,18 +17,23 @@ a {
   box-sizing: border-box;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+button:focus,
+button:active:focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button.active.focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: none;
+}
 
-/*u can change rem here*/
+/* u can change rem here */
 html {
   font-size: 16px;
 }
+
+/* scroll */
 body {
   overflow-y: overlay;
-}
-
-.header {
-  @apply border-red-700 opacity-60;
 }

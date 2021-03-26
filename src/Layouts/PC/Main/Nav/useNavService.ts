@@ -12,8 +12,7 @@ export const defaultNav = 'article';
 
 import { AiOutlineBulb, AiOutlineMan } from 'react-icons/ai';
 import { BsBook, BsCalendar, BsCardText, BsCollection } from 'react-icons/bs';
-import { GrPersonalComputer } from 'react-icons/gr';
-import { RiPlantLine } from 'react-icons/ri';
+import { RiPlantLine, RiMacbookLine } from 'react-icons/ri';
 
 // * --------------------------------------------------------------------------- hook
 
@@ -24,7 +23,7 @@ export const useNavService = () => {
   const defaultNavList: { key: string; icon: any; text: string; link: string; active: boolean }[] = [
     { key: '1', icon: BsBook, text: '技术文章', link: getLink('article'), active: false },
     { key: '2', icon: RiPlantLine, text: '生活分享', link: getLink('lifeSharing'), active: false },
-    { key: '3', icon: GrPersonalComputer, text: '软件技巧', link: getLink('software'), active: false },
+    { key: '3', icon: RiMacbookLine, text: '软件技巧', link: getLink('software'), active: false },
     { key: '4', icon: AiOutlineBulb, text: '知识卡片', link: getLink('card'), active: false },
     { key: '5', icon: BsCardText, text: '简历', link: getLink('resume'), active: false },
     { key: '6', icon: BsCollection, text: '作品集', link: getLink('portfolio'), active: false },
