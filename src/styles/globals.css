@@ -1,0 +1,39 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  /* TODO: 抽离成全局变量 body-bg */
+  background-color: #eee;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button:focus,
+button:active:focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button.active.focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+/* u can change rem here */
+html {
+  font-size: 16px;
+}
+
+/* scroll */
+body {
+  overflow-y: overlay;
+}

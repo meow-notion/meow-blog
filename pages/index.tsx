@@ -1,23 +1,29 @@
-import Head from 'next/head';
 import React from 'react';
-// @ts-ignore
-import { jsx, css } from '@emotion/react';
+import Head from 'next/head';
+import { ArticleType } from '@/apis/use-articles';
+import { fetchArticles, useAllArticle, articleUrl } from '@/apis/use-articles';
+import { PCLayout } from '@/Layouts/PC/PCLayout';
 
-// * --------------------------------------------------------------------------- style
+// * --------------------------------------------------------------------------- SSG
 
-const style = css`
-  color: red;
-`;
+export const getStaticProps = async () => {
+  const posts = await fetchArticles(articleUrl);
+  return { props: { posts }, revalidate: 1 };
+};
 
 // * --------------------------------------------------------------------------- component
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC<{ posts: ArticleType[] }> = ({ posts }) => {
+  const { data, error } = useAllArticle(posts);
+
+  if (error) return <div>error: {error}</div>;
+  if (!data) return <div>loading...</div>;
   return (
     <>
       <Head>
         <title>绅士喵呜の博客</title>
       </Head>
-      <div css={style}>hello word</div>
+      <PCLayout />
     </>
   );
 };
