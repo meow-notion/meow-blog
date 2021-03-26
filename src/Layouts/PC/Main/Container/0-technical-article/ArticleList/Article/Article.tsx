@@ -26,7 +26,6 @@ const info = css`
 
 export const Article: React.FC<{ key: string; uuid: string }> = ({ uuid }) => {
   const { article } = useArticleService(uuid);
-  console.log(article, 111111);
   return article ? (
     <div css={item}>
       <div css={content}>

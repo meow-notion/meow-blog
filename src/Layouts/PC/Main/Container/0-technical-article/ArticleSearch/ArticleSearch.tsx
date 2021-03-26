@@ -7,9 +7,8 @@ import { SearchTags } from './SearchTags/SearchTags';
 // * --------------------------------------------------------------------------- style
 
 const search = css`
-  background-color: rgba(255, 255, 255, 0.6);
   color: rgba(0, 0, 0, 0.54);
-  ${tw`w-full text-sm font-light mb-3 rounded`}
+  ${tw`w-full mb-3`}
 `;
 
 // * --------------------------------------------------------------------------- component

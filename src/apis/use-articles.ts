@@ -32,6 +32,5 @@ export const fetchArticles = (url: string): Promise<ArticleType[]> => axios.get(
  */
 export const useAllArticle = (initialData?: ArticleType[]): { data?: ArticleType[]; error: Error } => {
   const { data, error } = useSWR(articleUrl, fetchArticles, { initialData });
-  console.log(data, 333333333);
   return { data, error };
 };

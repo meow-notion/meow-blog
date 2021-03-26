@@ -1,14 +1,14 @@
 import React from 'react';
 import tw, { css } from 'twin.macro';
 import { useSearchInputService } from './useSearchInputService';
-
-import { AiOutlineSearch, AiOutlineFieldTime } from 'react-icons/ai';
+import { AiOutlineSearch } from 'react-icons/ai';
+import { GiClockwork } from 'react-icons/gi';
 
 // * --------------------------------------------------------------------------- style
 
 const group = css`
   background-color: rgba(255, 255, 255, 0.6);
-  ${tw`flex flex-row justify-between p-2`}
+  ${tw`flex flex-row justify-between p-2 mb-4 rounded`}
 `;
 
 const inputWrapper = css`
@@ -16,7 +16,6 @@ const inputWrapper = css`
 `;
 
 const input = css`
-  //color: #e8e8e8;
   color: #999;
   background-color: #e8e8e8;
   &:hover {
@@ -52,10 +51,9 @@ export const SearchInput: React.FC = () => {
         <button css={svg}>
           <AiOutlineSearch />
         </button>
-        {/*<div>搜索按钮</div>*/}
       </div>
       <button css={button}>
-        <AiOutlineFieldTime />
+        <GiClockwork />
       </button>
     </div>
   );

@@ -20,6 +20,7 @@ import { RiPlantLine, RiMacbookLine } from 'react-icons/ri';
  * active target nav link by url router
  */
 export const useNavService = () => {
+  // TODO: remove any
   const defaultNavList: { key: string; icon: any; text: string; link: string; active: boolean }[] = [
     { key: '1', icon: BsBook, text: '技术文章', link: getLink('article'), active: false },
     { key: '2', icon: RiPlantLine, text: '生活分享', link: getLink('lifeSharing'), active: false },
