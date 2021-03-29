@@ -12,11 +12,28 @@ const pcLayout = css`
   ${tw`min-h-screen w-full flex flex-col justify-between items-center`}
 `;
 
+const background = css`
+  background-color: #eee;
+  ${tw`fixed w-full h-full top-0 left-0`}
+`;
+
+const image = css`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  //background: url(/src/assets/background.png);
+  background: url(${require("@/assets/background.png")});
+`;
+
 // * --------------------------------------------------------------------------- component
 
 export const PCLayout: React.FC = () => {
   return (
     <div css={pcLayout}>
+      <div css={background}>
+        <div css={image} />
+      </div>
       <Header />
       <Main />
       <Footer />

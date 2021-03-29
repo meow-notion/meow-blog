@@ -9,7 +9,7 @@ const footer = css`
   color: rgba(0, 0, 0, 0.54);
   // TODO: 抽离成变量 module-bg
   background-color: rgba(255, 255, 255, 0.6);
-  ${tw`w-full flex justify-center items-center h-18 mt-4 text-xs`}
+  ${tw`w-full flex justify-center items-center h-18 mt-4 text-xs z-0`}
 `;
 
 // * --------------------------------------------------------------------------- component

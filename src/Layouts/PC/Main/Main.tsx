@@ -7,7 +7,7 @@ import { Container } from './Container/Container';
 const main = css`
   // TODO: 抽离成变量 pcWidth or pcContainer
   width: 1050px;
-  ${tw`pt-20 flex flex-row`}
+  ${tw`pt-20 flex flex-row z-0`}
 `;
 
 // * --------------------------------------------------------------------------- component
