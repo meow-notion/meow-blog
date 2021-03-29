@@ -40,15 +40,13 @@ export const Header: React.FC = () => {
   return (
     <header css={header}>
       <div css={pcContainer}>
-        {/* logo 和 标语 区域 */}
         <Link href={'/'}>
           <a css={logoWrapper}>
-            {/*<img css={img} src={imgUrl} draggable="false" alt="LOGO" />*/}
             <span css={logo}>{'<Meow />'}</span>
             <span>{text}</span>
           </a>
         </Link>
-        {/* TODO：音乐组件 */}
+
         <Music />
       </div>
     </header>

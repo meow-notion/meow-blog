@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import { PCLayoutService } from '@/Layouts/PC/usePCLayoutService';
 import { getServiceToken } from '@/utils/getServiceToken';
-import React from 'react';
 
 // * --------------------------------------------------------------------------- hook
 
 export const useTechnicalArticleService = () => {
+  const { pageData } = useContext(PCLayoutService);
+
+  console.log(pageData, 121212);
   return {
     articleList: [{ key: '132123123', name: '23123132' }],
   };
@@ -12,18 +16,3 @@ export const useTechnicalArticleService = () => {
 // * --------------------------------------------------------------------------- service
 
 export const TechnicalArticleService = getServiceToken(useTechnicalArticleService);
-
-// * --------------------------------------------------------------------------- provider
-
-/**
- * TODO: 在这里封装还是手动声明比较好呢？
- */
-
-export const TechnicalArticleServiceProvider: React.FC = (props) => {
-  const technicalArticleService = useTechnicalArticleService();
-  return (
-    <TechnicalArticleService.Provider value={technicalArticleService}>
-      {props.children}
-    </TechnicalArticleService.Provider>
-  );
-};

@@ -1,5 +1,7 @@
 import React from 'react';
 import tw, { css } from 'twin.macro';
+import { usePCLayoutService, PCLayoutService } from './usePCLayoutService';
+
 import { Header } from './Header/Header';
 import { Main } from './Main/Main';
 import { Footer } from './Footer/Footer';
@@ -22,21 +24,23 @@ const image = css`
   width: 100%;
   height: 100%;
   opacity: 0.3;
-  //background: url(/src/assets/background.png);
-  background: url(${require("@/assets/background.png")});
+  background: url(${require('@/assets/background.png')});
 `;
 
 // * --------------------------------------------------------------------------- component
 
-export const PCLayout: React.FC = () => {
+export const PCLayout: React.FC<{ data: any }> = ({ data }) => {
+  const layoutService = usePCLayoutService(data);
   return (
-    <div css={pcLayout}>
-      <div css={background}>
-        <div css={image} />
+    <PCLayoutService.Provider value={layoutService}>
+      <div css={pcLayout}>
+        <div css={background}>
+          <div css={image} />
+        </div>
+        <Header />
+        <Main />
+        <Footer />
       </div>
-      <Header />
-      <Main />
-      <Footer />
-    </div>
+    </PCLayoutService.Provider>
   );
 };
